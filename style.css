@@ -1,0 +1,15 @@
+body {
+    background: url(https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=4d19695422a0150c535cd6963fadae83&auto=format&fit=crop&w=1947&q=80) no-repeat center center fixed;
+    text-align:center;
+    background-size:cover;
+    padding-top:10%;
+    padding-right:30%;
+}
+
+.panel {
+    background-color:lightgrey;
+    opacity:0.6;
+    margin: auto;
+    border: 10px;
+    max-width: 60%;
+}

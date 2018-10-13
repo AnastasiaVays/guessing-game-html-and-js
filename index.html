@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Guessing Numbers Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+
+</head>
+<body onload="generateNum()">
+
+<div id="container">
+  <div class="panel">
+    <h2>Guess a number between 1 and 50!</h2>  
+    <p>Click START below to refresh the page and try a new game!</p>
+    <button id="startButton" onclick="newGame()">START</button> 
+    <p></p>
+  </div>
+
+  <div class="panel">
+    <h3 id="resultOutput">Enter your guess below</h3>
+    <input type="number" id="inputbox" onchange="compareGuess()">
+    <button id="Guess" onclick="compareGuess">GUESS</button>
+    <p>Number of attempts remaining: <span id ="attempts"></span></p>
+  </div>
+  
+  <div class="panel">
+    <h3>Your past guesses:</h3>
+    <p id="pastguesses"></p> 
+  </div> 
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,5 +1,4 @@
-
-    let max = 50;
+let max = 50;
     let min = 1;
     let randomNum;
     let pastGuesses = [];
@@ -11,18 +10,22 @@
     }
    
     function generateNum () {
-        randomNum = Math.floor(Math.random() * (max - min +1)) + min;
-        //console.log(randomNum);        
+        randomNum = Math.floor(Math.random() * (max - min +1)) + min;       
         document.getElementById('startButton').style.display = none;
     }
 
     function compareGuess(){
         let userGuess = " " + document.getElementById('inputbox').value;
         userGuess = parseInt(userGuess);
-        //console.log(userGuess);
+
+    if (isNaN(userGuess)) {
+            document.getElementById('resultOutput').innerHTML = 'Input INVALID. Make sure your guess is a number between 1 and 50';
+    }
+       if ((userGuess) < 1 || (userGuess > 50)) {
+        document.getElementById('resultOutput').innerHTML = 'Input INVALID. Make sure your guess is a number between 1 and 50';
+       } 
         
     pastGuesses.push(userGuess);
-    //console.log(pastGuesses);    
     document.getElementById('pastguesses').innerHTML = pastGuesses;
     
     attempts--;
@@ -43,11 +46,8 @@
             newGame();
         }
     } else if (randomNum == userGuess) {
-        document.getElementById('resultOutput').innerHTML = "<span style='background-color: turquoise;'>Congratulations!You guessed right.</span>";
-        
+        document.getElementById('resultOutput').innerHTML = "<span style='background-color: turquoise;'>Congratulations!You guessed right.</span>";    
     }
 }
 
-
- 
     

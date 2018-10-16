@@ -18,12 +18,12 @@ let max = 50;
         let userGuess = " " + document.getElementById('inputbox').value;
         userGuess = parseInt(userGuess);
 
-    if (isNaN(userGuess)) {
-            document.getElementById('resultOutput').innerHTML = 'Input INVALID. Make sure your guess is a number between 1 and 50';
-    }
-       if ((userGuess) < 1 || (userGuess > 50)) {
-        document.getElementById('resultOutput').innerHTML = 'Input INVALID. Make sure your guess is a number between 1 and 50';
-       } 
+    if (isNaN(userGuess)) {    
+    document.getElementById('resultOutput').innerHTML = 'Input INVALID. Make sure your guess is a number between 1 and 50';
+}
+if ((userGuess) < 1 || (userGuess > 50)) {        
+    document.getElementById('resultOutput').innerHTML = 'Input INVALID. Make sure your guess is a number between 1 and 50';
+} 
         
     pastGuesses.push(userGuess);
     document.getElementById('pastguesses').innerHTML = pastGuesses;

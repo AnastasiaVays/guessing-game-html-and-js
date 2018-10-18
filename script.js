@@ -33,21 +33,18 @@ if ((userGuess) < 1 || (userGuess > 50)) {
  
 
      
-    if (userGuess> randomNum) {
+    if (userGuess> randomNum && userGuess <= 50 ) {
        document.getElementById('resultOutput').innerHTML = "<span style='background-color: pink;'>Your guess is too high!Try one more time.</span>";
-       if (attempts<1) {
+    } else if (attempts<1) {
            alert('GAME OVER. You have no more attempts left. The game will restart.')
            newGame();
-       }
-    } else if (userGuess <randomNum) {
+    } else if (userGuess <randomNum && userGuess >= 1) {
         document.getElementById('resultOutput').innerHTML = "<span style='background-color: pink;'>Your guess is too low! Try one more time.</span>";
-        if (attempts<1) {
+    }else if (attempts<1) {
             alert('GAME OVER. You have no more attempts left. The game will restart.')
             newGame();
-        }
     } else if (randomNum == userGuess) {
         document.getElementById('resultOutput').innerHTML = "<span style='background-color: turquoise;'>Congratulations!You guessed right.</span>";    
     }
 }
-
     
